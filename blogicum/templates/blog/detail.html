@@ -1,23 +1,23 @@
 {% extends "base.html" %}
     <!-- Формируется из локации и даты -->
 
-{% block title %}{{ detail_info.location }}. {{ detail_info.date }}{% endblock %}
-
+    
+    {% block title %}{{ post.location }}. {{ post.date }}{% endblock %}
 {% block content %}
 <article>
   <ul>
     <li>
-      Место: {{ detail_info.location }}             
+      Место: {{ post.location }}             
     </li>
     <li>
-      Дата: {{ detail_info.date }}
+      Дата: {{ post.date }}
     </li>
     <li>
-      Категория: <a href="{% url 'blog:category_posts' detail_info.category %}">{{ detail_info.category }}</a>
+      Категория: <a href="{% url 'blog:category_posts' post.category %}">{{ post.category }}</a>
     </li>
   </ul>         
   <p>
-    {{ detail_info.text|linebreaksbr }}
+    {{ post.text|linebreaksbr }}
   </p>          
 </article>       
 {% endblock %}

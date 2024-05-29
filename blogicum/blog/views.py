@@ -57,7 +57,7 @@ def index(request):
 def post_detail(request, id):
     template_name = 'blog/detail.html'
     context = {
-        'detail_info': posts[id],
+        'post': posts[id],
     }
     return render(request, template_name, context)
 

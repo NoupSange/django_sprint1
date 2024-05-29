@@ -3,7 +3,7 @@
 {% block title %}Лента записей{% endblock %}
 {% block content %}
   <h1>Лента записей</h1>                        
-  {% for post in posts %}
+  {% for post in posts reversed %}
     <hr>
     <article>
       <ul>
@@ -22,6 +22,8 @@
       </p>
       <a href="{% url 'blog:post_detail' post.id %}">Читать полный текст</a>
     </article>
+    {% empty %}
+      Постов пока нет 
   {% endfor %}
   <hr>
 {% endblock %}
