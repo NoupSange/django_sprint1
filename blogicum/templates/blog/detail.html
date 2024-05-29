@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+    <!-- Формируется из локации и даты -->
+
+{% block title %}{{ detail_info.location }}. {{ detail_info.date }}{% endblock %}
+
+{% block content %}
+<article>
+  <ul>
+    <li>
+      Место: {{ detail_info.location }}             
+    </li>
+    <li>
+      Дата: {{ detail_info.date }}
+    </li>
+    <li>
+      Категория: <a href="not-my-day">{{ detail_info.category }}</a>
+    </li>
+  </ul>         
+  <p>
+    {{ detail_info.text|linebreaksbr }}
+  </p>          
+</article>       
+{% endblock %}
+         
