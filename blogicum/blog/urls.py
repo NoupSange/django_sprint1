@@ -1,6 +1,5 @@
 from django.urls import path
-
-from blogicum.blog import views
+from blog import views
 
 app_name = 'blog'
 
